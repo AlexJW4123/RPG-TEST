@@ -5,12 +5,13 @@ public class Program
 {
     public static void Main(string[] args)
     {
+        Console.ForegroundColor = ConsoleColor.Blue;
 
         string name;
         Console.WriteLine("What is your name?.");
         Thread.Sleep(200);
         name = Console.ReadLine();
-        Console.WriteLine("Hello, " + name + " welcome to my RPG.");
+        Console.WriteLine($"Hello, {name} welcome to my RPG.");
         int health = 100;
         string encounter;
         Thread.Sleep(1000);
@@ -34,7 +35,7 @@ public class Program
         {
             int coins = 40;
             string consumable;
-            Console.WriteLine("A mysterious hooded man offers you a RedBull, this will grant you 15 health but costs 20 coins. Your current balance is {0}. (y/n?) " , coins);
+            Console.WriteLine("A mysterious hooded man offers you a RedBull, this will grant you 15 health but costs 20 coins. Your current balance is  {0}.", coins);
             Thread.Sleep(1000);
             consumable = Console.ReadLine();
             Console.WriteLine("You chose ", encounter);
@@ -42,15 +43,20 @@ public class Program
 
 
 
-            if (consumable == "y") ;
+            if (consumable == "accept") ;
             Console.WriteLine("You drank a RedBull, you feel caffiene and creatine coursing through your veins, granting you 15 health.");
             Thread.Sleep(200);
             health = health + 15;
             coins = coins - 20;
 
-            Console.WriteLine("Your current health is ", + health);
-            Thread.Sleep(200);
-            Console.WriteLine("Your current balance is " + coins);
+            Console.WriteLine("Your current health is ", health);
+            Thread.Sleep(1000);
+            Console.WriteLine("Your current balance is ", coins);
+        }
+
+           
+            }
+            
             
             
 
@@ -59,8 +65,4 @@ public class Program
 
 
         }
-    }
-
-
-
-}
+    
